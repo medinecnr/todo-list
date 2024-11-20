@@ -1,5 +1,4 @@
 "use client"; 
-
 import { useState, useEffect } from "react"; 
 import { Button, Card, Input, Badge, Modal } from "@nextui-org/react"; 
 import { ModalContent, ModalHeader, ModalBody, ModalFooter, useDisclosure } from "@nextui-org/react";  
@@ -102,12 +101,12 @@ export default function Home() {
         {filteredTasks.map((task) => (
           <Card key={task.id} className="flex justify-between p-4">
             <div
-              className={`flex-grow cursor-pointer ${task.completed ? "line-through text-gray-400" : ""}`}
+              className={`flex-grow flex justify-center items-center cursor-pointer ${task.completed ? "line-through text-gray-400" : ""}`}
               onClick={() => toggleTask(task.id)}
             >
               {task.text}
             </div>
-            <div className="flex gap-2">
+            <div className="flex justify-center items-center mt-2 gap-2 ">
               <Button
                 color="success"
                 size="sm"
